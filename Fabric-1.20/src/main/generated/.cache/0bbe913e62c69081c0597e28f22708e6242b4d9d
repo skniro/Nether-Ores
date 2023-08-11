@@ -1,0 +1,9 @@
+// 1.20.1	2023-07-30T17:56:45.0935728	Nether Ores Reborn/Block Loot Tables
+f7de9e81d7e9d1346f145a96c9406254331922e4 data\nether_ores_reborn\loot_tables\blocks\coal_ore.json
+9d2b04cb1244bc80983c0de7404c070f4101c17a data\nether_ores_reborn\loot_tables\blocks\gold_ore.json
+62d8a31a22fccd39dc829a08ad998914f99bff4a data\nether_ores_reborn\loot_tables\blocks\copper_ore.json
+29975c21a8dc1c48385a2dca826615582fe2be16 data\nether_ores_reborn\loot_tables\blocks\iron_ore.json
+beec595141a4cd6ba5e55c59d60ddc14338ceee2 data\nether_ores_reborn\loot_tables\blocks\diamond_ore.json
+6b70b1bb37db5bc1114b96dad009393103e22663 data\nether_ores_reborn\loot_tables\blocks\lapis_ore.json
+ca043973dad60e1214f98ba8219b9a42abb0b6d5 data\nether_ores_reborn\loot_tables\blocks\emerald_ore.json
+651531f46805fccb35c271dde99bf9fe9965c612 data\nether_ores_reborn\loot_tables\blocks\redstone_ore.json

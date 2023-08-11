@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "nether_ores_reborn",
+  "version": "${version}",
+  "name": "Nether Ores Reborn",
+  "description": "",
+  "authors": [
+    "skniro"
+  ],
+  "contact": {
+    "website": "",
+    "sources": "https://github.com/skniro/Nether-Ores",
+    "issues": "https://github.com/skniro/Nether-Ores/issues"},
+  "license": "MIT",
+  "icon": "assets/nether_ores_reborn/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.skniro.nether_ores_reborn.datagen.ModDataGenerator"
+    ],
+    "client": [
+      "com.skniro.nether_ores_reborn.client.NetherOresClient"
+    ],
+    "main": [
+      "com.skniro.nether_ores_reborn.NetherOres"
+    ]
+  },
+  "mixins": [
+    "nether_ores_reborn.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "fabric": "*",
+    "minecraft": "1.19.x"
+  }
+}

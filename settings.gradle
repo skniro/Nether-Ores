@@ -1,9 +1,16 @@
 pluginManagement {
     repositories {
+        gradlePluginPortal()
         maven {
             name = 'Fabric'
             url = 'https://maven.fabricmc.net/'
         }
-        gradlePluginPortal()
+        maven {
+            name = 'Sponge Snapshots'
+            url = 'https://repo.spongepowered.org/repository/maven-public/'
+        }
     }
 }
+
+rootProject.name = 'Nether Ores Reborn 1.20'
+include("Fabric-1.20","Fabric-1.19")
