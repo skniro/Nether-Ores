@@ -12,21 +12,22 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class NetherOresBlocks {
-    public static final Block Nether_Coal_Ore = registerBlock("coal_ore", new Block(FabricBlockSettings.copy(Blocks.COAL_ORE)),ItemGroups.field_40743);
-    public static final Block Nether_Copper_Ore = registerBlock("copper_ore", new Block(FabricBlockSettings.copy(Blocks.COAL_ORE)),ItemGroups.field_40743);
-    public static final Block Nether_Diamond_Ore = registerBlock("diamond_ore", new Block(FabricBlockSettings.copy(Blocks.COAL_ORE)),ItemGroups.field_40743);
-    public static final Block Nether_Emerald_Ore = registerBlock("emerald_ore", new Block(FabricBlockSettings.copy(Blocks.COAL_ORE)),ItemGroups.field_40743);
-    public static final Block Nether_Gold_Ore = registerBlock("gold_ore", new Block(FabricBlockSettings.copy(Blocks.COAL_ORE)),ItemGroups.field_40743);
-    public static final Block Nether_Iron_Ore = registerBlock("iron_ore", new Block(FabricBlockSettings.copy(Blocks.COAL_ORE)),ItemGroups.field_40743);
-    public static final Block Nether_Lapis_Ore = registerBlock("lapis_ore", new Block(FabricBlockSettings.copy(Blocks.COAL_ORE)),ItemGroups.field_40743);
-    public static final Block Nether_Redstone_Ore = registerBlock("redstone_ore", new Block(FabricBlockSettings.copy(Blocks.COAL_ORE)), ItemGroups.field_40743);
+    public static final Block Nether_Coal_Ore = registerBlock("coal_ore", new ExperienceDroppingBlock(FabricBlockSettings.copy(Blocks.COAL_ORE), UniformIntProvider.create(2, 4)),ItemGroups.NATURAL);
+    public static final Block Nether_Copper_Ore = registerBlock("copper_ore", new ExperienceDroppingBlock(FabricBlockSettings.copy(Blocks.COAL_ORE), UniformIntProvider.create(2, 4)),ItemGroups.NATURAL);
+    public static final Block Nether_Diamond_Ore = registerBlock("diamond_ore", new ExperienceDroppingBlock(FabricBlockSettings.copy(Blocks.COAL_ORE), UniformIntProvider.create(2, 4)),ItemGroups.NATURAL);
+    public static final Block Nether_Emerald_Ore = registerBlock("emerald_ore", new ExperienceDroppingBlock(FabricBlockSettings.copy(Blocks.COAL_ORE), UniformIntProvider.create(2, 4)),ItemGroups.NATURAL);
+    public static final Block Nether_Gold_Ore = registerBlock("gold_ore", new ExperienceDroppingBlock(FabricBlockSettings.copy(Blocks.COAL_ORE), UniformIntProvider.create(2, 4)),ItemGroups.NATURAL);
+    public static final Block Nether_Iron_Ore = registerBlock("iron_ore", new ExperienceDroppingBlock(FabricBlockSettings.copy(Blocks.COAL_ORE), UniformIntProvider.create(2, 4)),ItemGroups.NATURAL);
+    public static final Block Nether_Lapis_Ore = registerBlock("lapis_ore", new ExperienceDroppingBlock(FabricBlockSettings.copy(Blocks.COAL_ORE), UniformIntProvider.create(2, 4)),ItemGroups.NATURAL);
+    public static final Block Nether_Redstone_Ore = registerBlock("redstone_ore", new ExperienceDroppingBlock(FabricBlockSettings.copy(Blocks.COAL_ORE), UniformIntProvider.create(2, 4)), ItemGroups.NATURAL);
 
     //TechReborn
-    public static final Block Nether_Iridium_Ore = registerBlock("iridium_ore", new Block(FabricBlockSettings.copy(Blocks.COAL_ORE)), ItemGroups.field_40743);
-    public static final Block Nether_Ruby_Ore = registerBlock("ruby_ore", new Block(FabricBlockSettings.copy(Blocks.COAL_ORE)), ItemGroups.field_40743);
-    public static final Block Nether_Lead_Ore = registerBlock("lead_ore", new Block(FabricBlockSettings.copy(Blocks.COAL_ORE)), ItemGroups.field_40743);
+    public static final Block Nether_Iridium_Ore = registerBlock("iridium_ore", new ExperienceDroppingBlock(FabricBlockSettings.copy(Blocks.COAL_ORE), UniformIntProvider.create(2, 4)), ItemGroups.NATURAL);
+    public static final Block Nether_Ruby_Ore = registerBlock("ruby_ore", new ExperienceDroppingBlock(FabricBlockSettings.copy(Blocks.COAL_ORE), UniformIntProvider.create(2, 4)), ItemGroups.NATURAL);
+    public static final Block Nether_Lead_Ore = registerBlock("lead_ore", new ExperienceDroppingBlock(FabricBlockSettings.copy(Blocks.COAL_ORE), UniformIntProvider.create(2, 4)), ItemGroups.NATURAL);
 
 
 
