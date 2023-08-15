@@ -21,7 +21,7 @@ public class ModContent {
     }
 
     public static void CreativeTab() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.field_40743).register(content -> {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(content -> {
             content.add(NetherOresBlocks.Nether_Coal_Ore);
             content.add(NetherOresBlocks.Nether_Copper_Ore);
             content.add(NetherOresBlocks.Nether_Diamond_Ore);
