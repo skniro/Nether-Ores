@@ -58,7 +58,7 @@ neoForge {
         }
 
         neodata {
-            data()
+            clientData()
 
             // example of overriding the workingDirectory set in configureEach above, uncomment if you want to use it
             // gameDirectory = project.file('run-data')

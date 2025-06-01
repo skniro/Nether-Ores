@@ -17,7 +17,7 @@ public class ModContent {
         NetherOresItems.registerModItems();
     }
     public static void registerBlock(){
-        NetherOresBlocks.registerBlock();
+        NetherOresBlocks.registerNetherOresBlock();
     }
 
     public static void CreativeTab() {

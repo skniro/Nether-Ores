@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.8-SNAPSHOT'
+    id 'fabric-loom' version '1.10-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -101,7 +101,7 @@ def dataOutput = 'src/main/generated'
 loom {
     runs {
         datagen {
-            server()
+            client()
 
             name "Data Generation"
             vmArg "-Dfabric-api.datagen"

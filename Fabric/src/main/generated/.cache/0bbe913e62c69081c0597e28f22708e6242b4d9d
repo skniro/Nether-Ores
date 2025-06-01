@@ -1,9 +1,9 @@
-// 1.21.1	2025-06-01T20:16:08.1538169	Nether Ores Reborn/Block Loot Tables
-aee0b3888fcd629f625bd389986b34e5a2bfb221 data\nether_ores_reborn\loot_table\blocks\lapis_ore.json
-bb82c4312347e8cd31bc1b5dab76a51c6f5878f7 data\nether_ores_reborn\loot_table\blocks\emerald_ore.json
-c756bf89de5d13930e50053d767e70ddfaff5b8c data\nether_ores_reborn\loot_table\blocks\coal_ore.json
-43b1751d31ae6028bb9e32148355477f4fdeaa80 data\nether_ores_reborn\loot_table\blocks\gold_ore.json
-9c83160863ce914335c4001219d9b88638b060da data\nether_ores_reborn\loot_table\blocks\copper_ore.json
-26d1b9755da34a8ef40f97aef7fd5348e4f687b3 data\nether_ores_reborn\loot_table\blocks\diamond_ore.json
-a092cc330bc4f574ae76273491fd23519e27cabe data\nether_ores_reborn\loot_table\blocks\redstone_ore.json
-a87608e597319b3b080b7485b78e5a2ec084ff4c data\nether_ores_reborn\loot_table\blocks\iron_ore.json
+// 1.21.5	-999999999-01-01T00:00:00	Nether Ores Reborn/Block Loot Tables
+c756bf89de5d13930e50053d767e70ddfaff5b8c data/nether_ores_reborn/loot_table/blocks/coal_ore.json
+9c83160863ce914335c4001219d9b88638b060da data/nether_ores_reborn/loot_table/blocks/copper_ore.json
+26d1b9755da34a8ef40f97aef7fd5348e4f687b3 data/nether_ores_reborn/loot_table/blocks/diamond_ore.json
+bb82c4312347e8cd31bc1b5dab76a51c6f5878f7 data/nether_ores_reborn/loot_table/blocks/emerald_ore.json
+43b1751d31ae6028bb9e32148355477f4fdeaa80 data/nether_ores_reborn/loot_table/blocks/gold_ore.json
+a87608e597319b3b080b7485b78e5a2ec084ff4c data/nether_ores_reborn/loot_table/blocks/iron_ore.json
+aee0b3888fcd629f625bd389986b34e5a2bfb221 data/nether_ores_reborn/loot_table/blocks/lapis_ore.json
+a092cc330bc4f574ae76273491fd23519e27cabe data/nether_ores_reborn/loot_table/blocks/redstone_ore.json

@@ -1,7 +1,6 @@
 package com.skniro.nether_ores_reborn.block;
 
 import com.skniro.nether_ores_reborn.NetherOres;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -10,42 +9,46 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
+import java.util.function.Function;
+
 public class NetherOresBlocks {
-    public static final Block Nether_Coal_Ore = registerBlock("coal_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.COAL_ORE)),ItemGroups.NATURAL);
-    public static final Block Nether_Copper_Ore = registerBlock("copper_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.COPPER_ORE)),ItemGroups.NATURAL);
-    public static final Block Nether_Diamond_Ore = registerBlock("diamond_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.DIAMOND_ORE)),ItemGroups.NATURAL);
-    public static final Block Nether_Emerald_Ore = registerBlock("emerald_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.EMERALD_ORE)),ItemGroups.NATURAL);
-    public static final Block Nether_Gold_Ore = registerBlock("gold_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.GOLD_ORE)),ItemGroups.NATURAL);
-    public static final Block Nether_Iron_Ore = registerBlock("iron_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.IRON_ORE)),ItemGroups.NATURAL);
-    public static final Block Nether_Lapis_Ore = registerBlock("lapis_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.LAPIS_ORE)),ItemGroups.NATURAL);
-    public static final Block Nether_Redstone_Ore = registerBlock("redstone_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.LAPIS_ORE)), ItemGroups.NATURAL);
-
-    //TechReborn
-    public static final Block Nether_Iridium_Ore = registerBlock("iridium_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.COAL_ORE)), ItemGroups.NATURAL);
-    public static final Block Nether_Ruby_Ore = registerBlock("ruby_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.COAL_ORE)), ItemGroups.NATURAL);
-    public static final Block Nether_Lead_Ore = registerBlock("lead_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.COAL_ORE)), ItemGroups.NATURAL);
+    public static final Block Nether_Coal_Ore = registerBlock("coal_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
+    public static final Block Nether_Copper_Ore = registerBlock("copper_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
+    public static final Block Nether_Diamond_Ore = registerBlock("diamond_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
+    public static final Block Nether_Emerald_Ore = registerBlock("emerald_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
+    public static final Block Nether_Gold_Ore = registerBlock("gold_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
+    public static final Block Nether_Iron_Ore = registerBlock("iron_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
+    public static final Block Nether_Lapis_Ore = registerBlock("lapis_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
+    public static final Block Nether_Redstone_Ore = registerBlock("redstone_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings), AbstractBlock.Settings.copy(Blocks.COAL_ORE), ItemGroups.NATURAL);
 
 
-
-
-    private static Block registerBlock(String name, Block block, RegistryKey<ItemGroup> tab) {
+    private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings, RegistryKey<ItemGroup> tab) {
+        Block block = (Block)factory.apply(settings.registryKey(keyOf(name)));
         registerBlockItem(name, block, tab);
-        return Registry.register(Registries.BLOCK, Identifier.of(NetherOres.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, keyOf(name), block);
     }
+
 
     private static Item registerBlockItem(String name, Block block, RegistryKey<ItemGroup> tab) {
-        return Registry.register(Registries.ITEM, Identifier.of(NetherOres.MOD_ID, name),
-                new BlockItem(block, new Item.Settings()));
+        return Registry.register(Registries.ITEM, RegistryKey.of(RegistryKeys.ITEM, Identifier.of(NetherOres.MOD_ID, name)),
+                new BlockItem(block, new Item.Settings().useBlockPrefixedTranslationKey()
+                        .registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(NetherOres.MOD_ID, name)))));
     }
 
-    private static Block registerBlockWithoutItem(String name, Block block) {
-        return Registry.register(Registries.BLOCK, Identifier.of(NetherOres.MOD_ID, name), block);
+    private static Block registerBlockWithoutItem(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
+        Block block = (Block)factory.apply(settings.registryKey(keyOf(name)));
+        return Registry.register(Registries.BLOCK, keyOf(name), block);
     }
 
-    public static void registerBlock() {
-        NetherOres.LOGGER.info("register Mod Blocks"+ NetherOres.MOD_ID);
+    private static RegistryKey<Block> keyOf(String name) {
+        return RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(NetherOres.MOD_ID, name));
+    }
+
+    public static void registerNetherOresBlock() {
+        NetherOres.LOGGER.info("register Mod Nether Ores Blocks"+ NetherOres.MOD_ID);
     }
 }
