@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.skniro.nether_ores_reborn.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "nether_ores_reborn.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
