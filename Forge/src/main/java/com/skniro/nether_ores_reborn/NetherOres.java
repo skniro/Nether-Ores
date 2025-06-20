@@ -5,8 +5,7 @@ import com.skniro.nether_ores_reborn.block.NetherOresBlocks;
 import com.skniro.nether_ores_reborn.item.*;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
@@ -19,13 +18,11 @@ public class NetherOres {
 
 
     public NetherOres(FMLJavaModLoadingContext context) {
-        IEventBus modEventBus = context.getModEventBus();
+        var modEventBus = context.getModBusGroup();
 
         NetherOresBlocks.registerMapleOreBlocks(modEventBus);
         MapleItems.registerModItems(modEventBus);
 
-
-        MinecraftForge.EVENT_BUS.register(this);
     }
 
 

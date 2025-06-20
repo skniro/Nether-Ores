@@ -2,7 +2,7 @@ package com.skniro.nether_ores_reborn.item;
 
 import com.skniro.nether_ores_reborn.NetherOres;
 import net.minecraft.world.item.*;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -18,7 +18,7 @@ public class MapleItems {
         return toReturn;
     }
 
-    public static void registerModItems(IEventBus eventBus) {
+    public static void registerModItems(BusGroup eventBus) {
         ITEMS.register(eventBus);
     }
 }

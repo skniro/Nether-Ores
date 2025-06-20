@@ -2,7 +2,7 @@ package com.skniro.nether_ores_reborn.client;
 
 import com.skniro.nether_ores_reborn.NetherOres;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.listener.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
