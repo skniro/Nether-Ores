@@ -17,6 +17,7 @@ public class ModDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(NetherOresRecipeProvider::new);
         pack.addProvider(NetherOresEnglishLanguageProvider::new);
         pack.addProvider(NetherOresSimplifiedChineseLanguageProvider::new);
+        pack.addProvider(ModBlockTagGeneration::new);
     }
 
     @Override
