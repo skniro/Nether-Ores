@@ -23,6 +23,13 @@ public class NetherOresEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(NetherOresBlocks.Nether_Lapis_Ore,"Nether Lapis Ore");
         translationBuilder.add(NetherOresBlocks.Nether_Redstone_Ore,"Nether Redstone Ore");
 
-
+        translationBuilder.add(NetherOresBlocks.End_Coal_Ore,"End Coal Ore");
+        translationBuilder.add(NetherOresBlocks.End_Copper_Ore,"End Copper Ore");
+        translationBuilder.add(NetherOresBlocks.End_Diamond_Ore,"End Diamond Ore");
+        translationBuilder.add(NetherOresBlocks.End_Emerald_Ore,"End Emerald Ore");
+        translationBuilder.add(NetherOresBlocks.End_Gold_Ore,"End Gold Ore");
+        translationBuilder.add(NetherOresBlocks.End_Iron_Ore,"End Iron Ore");
+        translationBuilder.add(NetherOresBlocks.End_Lapis_Ore,"End Lapis Ore");
+        translationBuilder.add(NetherOresBlocks.End_Redstone_Ore,"End Redstone Ore");
     }
 }

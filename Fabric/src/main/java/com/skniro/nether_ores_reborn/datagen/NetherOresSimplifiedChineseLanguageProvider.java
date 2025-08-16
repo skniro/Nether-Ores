@@ -22,5 +22,14 @@ public class NetherOresSimplifiedChineseLanguageProvider extends FabricLanguageP
         translationBuilder.add(NetherOresBlocks.Nether_Iron_Ore,"下界铁矿石");
         translationBuilder.add(NetherOresBlocks.Nether_Lapis_Ore,"下界青金石矿石");
         translationBuilder.add(NetherOresBlocks.Nether_Redstone_Ore,"下界红石矿石");
+
+        translationBuilder.add(NetherOresBlocks.End_Coal_Ore,"末地煤矿石");
+        translationBuilder.add(NetherOresBlocks.End_Copper_Ore,"末地铜矿石");
+        translationBuilder.add(NetherOresBlocks.End_Diamond_Ore,"末地钻石矿石");
+        translationBuilder.add(NetherOresBlocks.End_Emerald_Ore,"末地绿宝石矿石");
+        translationBuilder.add(NetherOresBlocks.End_Gold_Ore,"末地金矿石");
+        translationBuilder.add(NetherOresBlocks.End_Iron_Ore,"末地铁矿石");
+        translationBuilder.add(NetherOresBlocks.End_Lapis_Ore,"末地青金石矿石");
+        translationBuilder.add(NetherOresBlocks.End_Redstone_Ore,"末地红石矿石");
     }
 }
