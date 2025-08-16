@@ -23,6 +23,16 @@ public class NetherOresBlocks {
     public static final Block Nether_Lapis_Ore = registerBlock("lapis_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.LAPIS_ORE)),ItemGroups.NATURAL);
     public static final Block Nether_Redstone_Ore = registerBlock("redstone_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.LAPIS_ORE)), ItemGroups.NATURAL);
 
+    public static final Block End_Coal_Ore = registerBlock("end_coal_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.COAL_ORE)),ItemGroups.NATURAL);
+    public static final Block End_Copper_Ore = registerBlock("end_copper_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.COPPER_ORE)),ItemGroups.NATURAL);
+    public static final Block End_Diamond_Ore = registerBlock("end_diamond_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.DIAMOND_ORE)),ItemGroups.NATURAL);
+    public static final Block End_Emerald_Ore = registerBlock("end_emerald_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.EMERALD_ORE)),ItemGroups.NATURAL);
+    public static final Block End_Gold_Ore = registerBlock("end_gold_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.GOLD_ORE)),ItemGroups.NATURAL);
+    public static final Block End_Iron_Ore = registerBlock("end_iron_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.IRON_ORE)),ItemGroups.NATURAL);
+    public static final Block End_Lapis_Ore = registerBlock("end_lapis_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.LAPIS_ORE)),ItemGroups.NATURAL);
+    public static final Block End_Redstone_Ore = registerBlock("end_redstone_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.LAPIS_ORE)),ItemGroups.NATURAL);
+
+
     //TechReborn
     public static final Block Nether_Iridium_Ore = registerBlock("iridium_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.COAL_ORE)), ItemGroups.NATURAL);
     public static final Block Nether_Ruby_Ore = registerBlock("ruby_ore", new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), FabricBlockSettings.copy(Blocks.COAL_ORE)), ItemGroups.NATURAL);

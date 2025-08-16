@@ -12,7 +12,7 @@
     "sources": "https://github.com/skniro/Nether-Ores",
     "issues": "https://github.com/skniro/Nether-Ores/issues"},
   "license": "MIT",
-  "icon": "assets/nether_ores_reborn/icon.png",
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [

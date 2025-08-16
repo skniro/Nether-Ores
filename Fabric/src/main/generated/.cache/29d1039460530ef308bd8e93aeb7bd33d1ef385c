@@ -1,4 +1,4 @@
-// 1.21.1	2025-06-30T13:40:06.9809871	Nether Ores Reborn/Tags for minecraft:block
-918b5344c30e28b8dde6fc11a6567219d496f508 data\minecraft\tags\block\mineable\pickaxe.json
-d6b808546299ec259cff9a1473952e434827d2f1 data\minecraft\tags\block\needs_stone_tool.json
-944a33c20aad48804ed0c1d999f8cb79af19c378 data\minecraft\tags\block\needs_iron_tool.json
+// 1.21.1	2025-08-16T15:34:24.2192394	Nether Ores Reborn/Tags for minecraft:block
+fa3ae91c1028f73423a56e46a405a30d9d7d12da data\minecraft\tags\block\needs_stone_tool.json
+8f56f6f9f2712165789f2c6235c209e9ab4332e4 data\minecraft\tags\block\mineable\pickaxe.json
+8e536b2886cf3c34f2b47fbd8efb66c9f90a8cf8 data\minecraft\tags\block\needs_iron_tool.json

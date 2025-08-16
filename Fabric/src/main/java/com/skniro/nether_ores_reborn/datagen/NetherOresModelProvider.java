@@ -22,6 +22,14 @@ public class NetherOresModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(NetherOresBlocks.Nether_Lapis_Ore);
         blockStateModelGenerator.registerCubeAllModelTexturePool(NetherOresBlocks.Nether_Redstone_Ore);
 
+        blockStateModelGenerator.registerCubeAllModelTexturePool(NetherOresBlocks.End_Coal_Ore);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(NetherOresBlocks.End_Copper_Ore);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(NetherOresBlocks.End_Diamond_Ore);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(NetherOresBlocks.End_Emerald_Ore);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(NetherOresBlocks.End_Gold_Ore);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(NetherOresBlocks.End_Iron_Ore);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(NetherOresBlocks.End_Lapis_Ore);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(NetherOresBlocks.End_Redstone_Ore);
     }
 
     @Override
