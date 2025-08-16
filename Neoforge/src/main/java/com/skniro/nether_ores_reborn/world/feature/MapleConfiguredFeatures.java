@@ -29,10 +29,20 @@ public class MapleConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> Nether_Lapis_KEY = registerKey("lapis_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> Nether_Redstone_ORE_KEY = registerKey("redstone_ore");
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> End_Coal_ORE_KEY = registerKey("end_coal_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> End_Copper_KEY = registerKey("end_copper_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> End_Diamond_KEY = registerKey("end_diamond_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> End_Emerald_KEY = registerKey("end_emerald_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> End_Gold_KEY = registerKey("end_gold_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> End_Iron_KEY = registerKey("end_iron_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> End_Lapis_KEY = registerKey("end_lapis_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> End_Redstone_ORE_KEY = registerKey("end_redstone_ore");
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> featureRegisterable) {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherstoneReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
+        RuleTest endStoneReplaceables = new BlockMatchTest(Blocks.END_STONE);
 
         List<OreConfiguration.TargetBlockState> netherCoalOres =
                 List.of(OreConfiguration.target(netherstoneReplaceables, NetherOresBlocks.Nether_Coal_Ore.get().defaultBlockState()));
@@ -60,6 +70,31 @@ public class MapleConfiguredFeatures {
         register(featureRegisterable, Nether_Lapis_KEY, Feature.ORE, new OreConfiguration(netherLapisOres, 8));
         register(featureRegisterable, Nether_Redstone_ORE_KEY, Feature.ORE, new OreConfiguration(netherRedstoneOres, 8));
 
+        List<OreConfiguration.TargetBlockState> endCoalOres =
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Coal_Ore.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> endCopperOres =
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Copper_Ore.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> endDiamondOres =
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Diamond_Ore.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> endEmeraldOres =
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Emerald_Ore.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> endGoldOres =
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Gold_Ore.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> endIronOres =
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Iron_Ore.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> endLapisOres =
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Lapis_Ore.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> endRedstoneOres =
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Redstone_Ore.get().defaultBlockState()));
+
+        register(featureRegisterable, End_Coal_ORE_KEY, Feature.ORE, new OreConfiguration(endCoalOres, 6));
+        register(featureRegisterable, End_Copper_KEY, Feature.ORE, new OreConfiguration(endCopperOres, 4));
+        register(featureRegisterable, End_Diamond_KEY, Feature.ORE, new OreConfiguration(endDiamondOres, 4));
+        register(featureRegisterable, End_Emerald_KEY, Feature.ORE, new OreConfiguration(endEmeraldOres, 2));
+        register(featureRegisterable, End_Gold_KEY, Feature.ORE, new OreConfiguration(endGoldOres, 5));
+        register(featureRegisterable, End_Iron_KEY, Feature.ORE, new OreConfiguration(endIronOres, 5));
+        register(featureRegisterable, End_Lapis_KEY, Feature.ORE, new OreConfiguration(endLapisOres, 4));
+        register(featureRegisterable, End_Redstone_ORE_KEY, Feature.ORE, new OreConfiguration(endRedstoneOres, 4));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

@@ -7,6 +7,14 @@
     "nether_ores_reborn:coal_ore",
     "nether_ores_reborn:iron_ore",
     "nether_ores_reborn:copper_ore",
-    "nether_ores_reborn:lapis_ore"
+    "nether_ores_reborn:lapis_ore",
+    "nether_ores_reborn:end_diamond_ore",
+    "nether_ores_reborn:end_gold_ore",
+    "nether_ores_reborn:end_redstone_ore",
+    "nether_ores_reborn:end_emerald_ore",
+    "nether_ores_reborn:end_coal_ore",
+    "nether_ores_reborn:end_iron_ore",
+    "nether_ores_reborn:end_copper_ore",
+    "nether_ores_reborn:end_lapis_ore"
   ]
 }

@@ -31,6 +31,14 @@ public class ModContent {
             content.add(NetherOresBlocks.Nether_Lapis_Ore);
             content.add(NetherOresBlocks.Nether_Redstone_Ore);
 
+            content.add(NetherOresBlocks.End_Coal_Ore);
+            content.add(NetherOresBlocks.End_Copper_Ore);
+            content.add(NetherOresBlocks.End_Diamond_Ore);
+            content.add(NetherOresBlocks.End_Emerald_Ore);
+            content.add(NetherOresBlocks.End_Gold_Ore);
+            content.add(NetherOresBlocks.End_Iron_Ore);
+            content.add(NetherOresBlocks.End_Lapis_Ore);
+            content.add(NetherOresBlocks.End_Redstone_Ore);
         });
     }
 }

@@ -22,5 +22,22 @@ public class ModOreGeneration {
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.Nether_Lapis_PLACED_KEY);
         BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.Nether_Redstone_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.End_Coal_ORE_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.End_Copper_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.End_Diamond_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.End_Emerald_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.End_Gold_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.End_Iron_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.End_Lapis_PLACED_KEY);
+        BiomeModifications.addFeature(BiomeSelectors.foundInTheEnd(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.End_Redstone_PLACED_KEY);
     }
 }

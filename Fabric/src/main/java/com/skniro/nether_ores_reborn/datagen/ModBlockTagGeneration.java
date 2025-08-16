@@ -40,17 +40,32 @@ public class ModBlockTagGeneration extends FabricTagProvider.BlockTagProvider {
                 .add(NetherOresBlocks.Nether_Iron_Ore)
                 .add(NetherOresBlocks.Nether_Copper_Ore)
                 .add(NetherOresBlocks.Nether_Lapis_Ore)
+                .add(NetherOresBlocks.End_Diamond_Ore)
+                .add(NetherOresBlocks.End_Gold_Ore)
+                .add(NetherOresBlocks.End_Redstone_Ore)
+                .add(NetherOresBlocks.End_Emerald_Ore)
+                .add(NetherOresBlocks.End_Coal_Ore)
+                .add(NetherOresBlocks.End_Iron_Ore)
+                .add(NetherOresBlocks.End_Copper_Ore)
+                .add(NetherOresBlocks.End_Lapis_Ore)
                 .setReplace(false);
         valueLookupBuilder(NEEDS_IRON_TOOL)
                 .add(NetherOresBlocks.Nether_Diamond_Ore)
                 .add(NetherOresBlocks.Nether_Gold_Ore)
                 .add(NetherOresBlocks.Nether_Redstone_Ore)
                 .add(NetherOresBlocks.Nether_Emerald_Ore)
+                .add(NetherOresBlocks.End_Diamond_Ore)
+                .add(NetherOresBlocks.End_Gold_Ore)
+                .add(NetherOresBlocks.End_Redstone_Ore)
+                .add(NetherOresBlocks.End_Emerald_Ore)
                 .setReplace(false);
         valueLookupBuilder(NEEDS_STONE_TOOL)
                 .add(NetherOresBlocks.Nether_Iron_Ore)
                 .add(NetherOresBlocks.Nether_Copper_Ore)
                 .add(NetherOresBlocks.Nether_Lapis_Ore)
+                .add(NetherOresBlocks.End_Iron_Ore)
+                .add(NetherOresBlocks.End_Copper_Ore)
+                .add(NetherOresBlocks.End_Lapis_Ore)
                 .setReplace(false);
 
     }

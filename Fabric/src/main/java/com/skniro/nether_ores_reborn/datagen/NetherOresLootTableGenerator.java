@@ -26,7 +26,15 @@ public class NetherOresLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(NetherOresBlocks.Nether_Redstone_Ore,redstoneOreDrops(NetherOresBlocks.Nether_Redstone_Ore));
         addDrop(NetherOresBlocks.Nether_Coal_Ore, oreDrops(NetherOresBlocks.Nether_Coal_Ore,Items.COAL));
 
-
+        addDrop(NetherOresBlocks.End_Coal_Ore, oreDrops(NetherOresBlocks.End_Coal_Ore, Items.COAL));
+        addDrop(NetherOresBlocks.End_Copper_Ore, copperOreDrops(NetherOresBlocks.End_Copper_Ore));
+        addDrop(NetherOresBlocks.End_Diamond_Ore, oreDrops(NetherOresBlocks.End_Diamond_Ore, Items.DIAMOND));
+        addDrop(NetherOresBlocks.End_Emerald_Ore, oreDrops(NetherOresBlocks.End_Emerald_Ore, Items.EMERALD));
+        addDrop(NetherOresBlocks.End_Gold_Ore, oreDrops(NetherOresBlocks.End_Gold_Ore, Items.RAW_GOLD));
+        addDrop(NetherOresBlocks.End_Iron_Ore, oreDrops(NetherOresBlocks.End_Iron_Ore, Items.RAW_IRON));
+        addDrop(NetherOresBlocks.End_Lapis_Ore, lapisOreDrops(NetherOresBlocks.End_Lapis_Ore));
+        addDrop(NetherOresBlocks.End_Redstone_Ore, redstoneOreDrops(NetherOresBlocks.End_Redstone_Ore));
+        addDrop(NetherOresBlocks.End_Coal_Ore, oreDrops(NetherOresBlocks.End_Coal_Ore, Items.COAL));
 
     }
 

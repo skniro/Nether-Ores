@@ -25,6 +25,14 @@ public class MaplePlacedFeatures {
     public static final ResourceKey<PlacedFeature> Nether_Iron_PLACED_KEY = registerKey("iron_ore_placed");
     public static final ResourceKey<PlacedFeature> Nether_Lapis_PLACED_KEY = registerKey("lapis_ore_placed");
     public static final ResourceKey<PlacedFeature> Nether_Redstone_PLACED_KEY = registerKey("redstone_ore_placed");
+    public static final ResourceKey<PlacedFeature> End_Coal_ORE_PLACED_KEY = registerKey("end_coal_ore_placed");
+    public static final ResourceKey<PlacedFeature> End_Copper_PLACED_KEY = registerKey("end_copper_ore_placed");
+    public static final ResourceKey<PlacedFeature> End_Diamond_PLACED_KEY = registerKey("end_diamond_ore_placed");
+    public static final ResourceKey<PlacedFeature> End_Emerald_PLACED_KEY = registerKey("end_emerald_ore_placed");
+    public static final ResourceKey<PlacedFeature> End_Gold_PLACED_KEY = registerKey("end_gold_ore_placed");
+    public static final ResourceKey<PlacedFeature> End_Iron_PLACED_KEY = registerKey("end_iron_ore_placed");
+    public static final ResourceKey<PlacedFeature> End_Lapis_PLACED_KEY = registerKey("end_lapis_ore_placed");
+    public static final ResourceKey<PlacedFeature> End_Redstone_PLACED_KEY = registerKey("end_redstone_ore_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -57,6 +65,38 @@ public class MaplePlacedFeatures {
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
 
         register(context, Nether_Redstone_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MapleConfiguredFeatures.Nether_Redstone_ORE_KEY),
+                modifiersWithCount(10, // Veins per Chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
+
+        register(context, End_Coal_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MapleConfiguredFeatures.End_Coal_ORE_KEY),
+                modifiersWithCount(20, // Veins per Chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
+
+        register(context, End_Copper_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MapleConfiguredFeatures.End_Copper_KEY),
+                modifiersWithCount(16, // Veins per Chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
+
+        register(context, End_Diamond_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MapleConfiguredFeatures.End_Diamond_KEY),
+                modifiersWithCount(8, // Veins per Chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
+
+        register(context, End_Emerald_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MapleConfiguredFeatures.End_Emerald_KEY),
+                modifiersWithCount(6, // Veins per Chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
+
+        register(context, End_Gold_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MapleConfiguredFeatures.End_Gold_KEY),
+                modifiersWithCount(10, // Veins per Chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
+
+        register(context, End_Iron_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MapleConfiguredFeatures. End_Iron_KEY),
+                modifiersWithCount(16, // Veins per Chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
+
+        register(context, End_Lapis_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MapleConfiguredFeatures.End_Lapis_KEY),
+                modifiersWithCount(10, // Veins per Chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
+
+        register(context, End_Redstone_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(MapleConfiguredFeatures.End_Redstone_ORE_KEY),
                 modifiersWithCount(10, // Veins per Chunk
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(256))));
     }

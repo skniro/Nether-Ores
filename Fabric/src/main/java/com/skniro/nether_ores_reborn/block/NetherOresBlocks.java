@@ -24,6 +24,14 @@ public class NetherOresBlocks {
     public static final Block Nether_Iron_Ore = registerBlock("iron_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
     public static final Block Nether_Lapis_Ore = registerBlock("lapis_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
     public static final Block Nether_Redstone_Ore = registerBlock("redstone_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings), AbstractBlock.Settings.copy(Blocks.COAL_ORE), ItemGroups.NATURAL);
+    public static final Block End_Coal_Ore = registerBlock("end_coal_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
+    public static final Block End_Copper_Ore = registerBlock("end_copper_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
+    public static final Block End_Diamond_Ore = registerBlock("end_diamond_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
+    public static final Block End_Emerald_Ore = registerBlock("end_emerald_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
+    public static final Block End_Gold_Ore = registerBlock("end_gold_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
+    public static final Block End_Iron_Ore = registerBlock("end_iron_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
+    public static final Block End_Lapis_Ore = registerBlock("end_lapis_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings),AbstractBlock.Settings.copy(Blocks.COAL_ORE),ItemGroups.NATURAL);
+    public static final Block End_Redstone_Ore = registerBlock("end_redstone_ore", (settings)-> new ExperienceDroppingBlock(UniformIntProvider.create(2, 4), settings), AbstractBlock.Settings.copy(Blocks.COAL_ORE), ItemGroups.NATURAL);
 
 
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings, RegistryKey<ItemGroup> tab) {
