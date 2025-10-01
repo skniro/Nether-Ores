@@ -19,5 +19,6 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'Nether Ores Reborn 1.21.5'
-include("Fabric","Forge","Neoforge")
+rootProject.name = 'Nether Ores Reborn 1.21.9'
+include("Fabric","Neoforge")
+//include("Fabric","Forge","Neoforge")
