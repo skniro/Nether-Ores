@@ -1,40 +1,39 @@
 package com.skniro.nether_ores_reborn.datagen;
 
 import com.skniro.nether_ores_reborn.block.NetherOresBlocks;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.item.Items;
-import net.minecraft.registry.RegistryWrapper;
-
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.world.item.Items;
 import java.util.concurrent.CompletableFuture;
 
 
-public class NetherOresLootTableGenerator extends FabricBlockLootTableProvider {
-    public NetherOresLootTableGenerator(FabricDataOutput dataGenerator, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+public class NetherOresLootTableGenerator extends FabricBlockLootSubProvider {
+    public NetherOresLootTableGenerator(FabricPackOutput dataGenerator, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataGenerator, registryLookup);
     }
 
     @Override
     public void generate() {
-        addDrop(NetherOresBlocks.Nether_Coal_Ore, oreDrops(NetherOresBlocks.Nether_Coal_Ore,Items.COAL));
-        addDrop(NetherOresBlocks.Nether_Copper_Ore, copperOreDrops(NetherOresBlocks.Nether_Copper_Ore));
-        addDrop(NetherOresBlocks.Nether_Diamond_Ore, oreDrops(NetherOresBlocks.Nether_Diamond_Ore,Items.DIAMOND));
-        addDrop(NetherOresBlocks.Nether_Emerald_Ore, oreDrops(NetherOresBlocks.Nether_Emerald_Ore,Items.EMERALD));
-        addDrop(NetherOresBlocks.Nether_Gold_Ore, oreDrops(NetherOresBlocks.Nether_Gold_Ore,Items.RAW_GOLD));
-        addDrop(NetherOresBlocks.Nether_Iron_Ore, oreDrops(NetherOresBlocks.Nether_Iron_Ore,Items.RAW_IRON));
-        addDrop(NetherOresBlocks.Nether_Lapis_Ore, lapisOreDrops(NetherOresBlocks.Nether_Lapis_Ore));
-        addDrop(NetherOresBlocks.Nether_Redstone_Ore,redstoneOreDrops(NetherOresBlocks.Nether_Redstone_Ore));
-        addDrop(NetherOresBlocks.Nether_Coal_Ore, oreDrops(NetherOresBlocks.Nether_Coal_Ore,Items.COAL));
+        add(NetherOresBlocks.Nether_Coal_Ore, createOreDrop(NetherOresBlocks.Nether_Coal_Ore,Items.COAL));
+        add(NetherOresBlocks.Nether_Copper_Ore, createCopperOreDrops(NetherOresBlocks.Nether_Copper_Ore));
+        add(NetherOresBlocks.Nether_Diamond_Ore, createOreDrop(NetherOresBlocks.Nether_Diamond_Ore,Items.DIAMOND));
+        add(NetherOresBlocks.Nether_Emerald_Ore, createOreDrop(NetherOresBlocks.Nether_Emerald_Ore,Items.EMERALD));
+        add(NetherOresBlocks.Nether_Gold_Ore, createOreDrop(NetherOresBlocks.Nether_Gold_Ore,Items.RAW_GOLD));
+        add(NetherOresBlocks.Nether_Iron_Ore, createOreDrop(NetherOresBlocks.Nether_Iron_Ore,Items.RAW_IRON));
+        add(NetherOresBlocks.Nether_Lapis_Ore, createLapisOreDrops(NetherOresBlocks.Nether_Lapis_Ore));
+        add(NetherOresBlocks.Nether_Redstone_Ore,createRedstoneOreDrops(NetherOresBlocks.Nether_Redstone_Ore));
+        add(NetherOresBlocks.Nether_Coal_Ore, createOreDrop(NetherOresBlocks.Nether_Coal_Ore,Items.COAL));
 
-        addDrop(NetherOresBlocks.End_Coal_Ore, oreDrops(NetherOresBlocks.End_Coal_Ore, Items.COAL));
-        addDrop(NetherOresBlocks.End_Copper_Ore, copperOreDrops(NetherOresBlocks.End_Copper_Ore));
-        addDrop(NetherOresBlocks.End_Diamond_Ore, oreDrops(NetherOresBlocks.End_Diamond_Ore, Items.DIAMOND));
-        addDrop(NetherOresBlocks.End_Emerald_Ore, oreDrops(NetherOresBlocks.End_Emerald_Ore, Items.EMERALD));
-        addDrop(NetherOresBlocks.End_Gold_Ore, oreDrops(NetherOresBlocks.End_Gold_Ore, Items.RAW_GOLD));
-        addDrop(NetherOresBlocks.End_Iron_Ore, oreDrops(NetherOresBlocks.End_Iron_Ore, Items.RAW_IRON));
-        addDrop(NetherOresBlocks.End_Lapis_Ore, lapisOreDrops(NetherOresBlocks.End_Lapis_Ore));
-        addDrop(NetherOresBlocks.End_Redstone_Ore, redstoneOreDrops(NetherOresBlocks.End_Redstone_Ore));
-        addDrop(NetherOresBlocks.End_Coal_Ore, oreDrops(NetherOresBlocks.End_Coal_Ore, Items.COAL));
+        add(NetherOresBlocks.End_Coal_Ore, createOreDrop(NetherOresBlocks.End_Coal_Ore, Items.COAL));
+        add(NetherOresBlocks.End_Copper_Ore, createCopperOreDrops(NetherOresBlocks.End_Copper_Ore));
+        add(NetherOresBlocks.End_Diamond_Ore, createOreDrop(NetherOresBlocks.End_Diamond_Ore, Items.DIAMOND));
+        add(NetherOresBlocks.End_Emerald_Ore, createOreDrop(NetherOresBlocks.End_Emerald_Ore, Items.EMERALD));
+        add(NetherOresBlocks.End_Gold_Ore, createOreDrop(NetherOresBlocks.End_Gold_Ore, Items.RAW_GOLD));
+        add(NetherOresBlocks.End_Iron_Ore, createOreDrop(NetherOresBlocks.End_Iron_Ore, Items.RAW_IRON));
+        add(NetherOresBlocks.End_Lapis_Ore, createLapisOreDrops(NetherOresBlocks.End_Lapis_Ore));
+        add(NetherOresBlocks.End_Redstone_Ore, createRedstoneOreDrops(NetherOresBlocks.End_Redstone_Ore));
+        add(NetherOresBlocks.End_Coal_Ore, createOreDrop(NetherOresBlocks.End_Coal_Ore, Items.COAL));
 
     }
 
