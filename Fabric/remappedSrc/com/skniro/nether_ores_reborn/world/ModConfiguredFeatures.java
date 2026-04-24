@@ -4,8 +4,8 @@ import com.skniro.nether_ores_reborn.NetherOres;
 import com.skniro.nether_ores_reborn.block.NetherOresBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.level.block.Blocks;
@@ -40,6 +40,7 @@ public class ModConfiguredFeatures {
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest endStoneReplaceables = new BlockMatchTest(Blocks.END_STONE);
 
         List<OreConfiguration.TargetBlockState> netherCoalOres =
                 List.of(OreConfiguration.target(stoneReplaceables, NetherOresBlocks.Nether_Coal_Ore.defaultBlockState()));
@@ -69,21 +70,21 @@ public class ModConfiguredFeatures {
 
 
         List<OreConfiguration.TargetBlockState> endCoalOres =
-                List.of(OreConfiguration.target(stoneReplaceables, NetherOresBlocks.End_Coal_Ore.defaultBlockState()));
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Coal_Ore.defaultBlockState()));
         List<OreConfiguration.TargetBlockState> endCopperOres =
-                List.of(OreConfiguration.target(stoneReplaceables, NetherOresBlocks.End_Copper_Ore.defaultBlockState()));
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Copper_Ore.defaultBlockState()));
         List<OreConfiguration.TargetBlockState> endDiamondOres =
-                List.of(OreConfiguration.target(stoneReplaceables, NetherOresBlocks.End_Diamond_Ore.defaultBlockState()));
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Diamond_Ore.defaultBlockState()));
         List<OreConfiguration.TargetBlockState> endEmeraldOres =
-                List.of(OreConfiguration.target(stoneReplaceables, NetherOresBlocks.End_Emerald_Ore.defaultBlockState()));
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Emerald_Ore.defaultBlockState()));
         List<OreConfiguration.TargetBlockState> endGoldOres =
-                List.of(OreConfiguration.target(stoneReplaceables, NetherOresBlocks.End_Gold_Ore.defaultBlockState()));
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Gold_Ore.defaultBlockState()));
         List<OreConfiguration.TargetBlockState> endIronOres =
-                List.of(OreConfiguration.target(stoneReplaceables, NetherOresBlocks.End_Iron_Ore.defaultBlockState()));
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Iron_Ore.defaultBlockState()));
         List<OreConfiguration.TargetBlockState> endLapisOres =
-                List.of(OreConfiguration.target(stoneReplaceables, NetherOresBlocks.End_Lapis_Ore.defaultBlockState()));
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Lapis_Ore.defaultBlockState()));
         List<OreConfiguration.TargetBlockState> endRedstoneOres =
-                List.of(OreConfiguration.target(stoneReplaceables, NetherOresBlocks.End_Redstone_Ore.defaultBlockState()));
+                List.of(OreConfiguration.target(endStoneReplaceables, NetherOresBlocks.End_Redstone_Ore.defaultBlockState()));
 
         register(context, End_Coal_ORE_KEY, Feature.ORE, new OreConfiguration(endCoalOres, 6));
         register(context, End_Copper_KEY, Feature.ORE, new OreConfiguration(endCopperOres, 4));

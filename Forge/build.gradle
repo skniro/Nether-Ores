@@ -3,7 +3,7 @@ plugins {
     id 'idea'
     id 'eclipse'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '7.0.0-beta.+'
+    id 'net.minecraftforge.gradle' version '7.0.+'
     id 'net.minecraftforge.jarjar' version '0.2.3'
 }
 
@@ -20,7 +20,7 @@ println "Java: ${providers.systemProperty('java.version').get()}, " +
 
 minecraft {
     // The mappings can be changed at any time and must be in the following format.
-    // Channel:   Version:
+     // Channel:   Version:
     // official   MCVersion             Official field/method names from Mojang mapping files
     // parchment  YYYY.MM.DD-MCVersion  Open community-sourced parameter names and javadocs layered on top of official
     //
